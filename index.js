@@ -2,7 +2,10 @@
 const Mongoose=require("mongoose")
  const cors=require("cors")   
  
- Mongoose.connect("mongodb://localhost:27017/mydatabase"); 
+ Mongoose.connect("mongodb://0.0.0.0:27017/mydatabase",()=>
+ {
+  console.log("connected to mongoose")
+ }); 
  
 //  const yogeshschema=new Mongoose.Schema({
 //     Name:String,
