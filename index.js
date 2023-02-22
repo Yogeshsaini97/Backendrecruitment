@@ -1,6 +1,8 @@
 
 // const Mongoose=require("mongoose")
  const cors=require("cors")   
+
+ const PORT=5000;
  
 //  Mongoose.connect("mongodb://0.0.0.0:27017/mydatabase",()=>
 //  {
@@ -165,9 +167,9 @@ console.log("hy");
 
 
 
-app.listen(5000,()=>
+app.listen(PORT,()=>
 {
-    console.log("connected to 5000")
+    console.log(`connected to ${PORT}`)
 });
 
 
