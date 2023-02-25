@@ -12,47 +12,47 @@ const runbackend= async ()=>
  
 
  
-Mongoose.connect("mongodb://0.0.0.0:27017/mydatabase",()=>
-{
- console.log("connected to mongoose")
-}); 
+// Mongoose.connect("mongodb://0.0.0.0:27017/mydatabase",()=>
+// {
+//  console.log("connected to mongoose")
+// }); 
 
 
 
-const Companyschema=new Mongoose.Schema({
-   companyName: {
-       type: String,
-       required: true,
+// const Companyschema=new Mongoose.Schema({
+//    companyName: {
+//        type: String,
+//        required: true,
       
-     },
-     Profiles: { type: Array, default: [] },
-     Location: {
-       type: Array, default: [] 
+//      },
+//      Profiles: { type: Array, default: [] },
+//      Location: {
+//        type: Array, default: [] 
  
-     },
-     WorkingDays: {
-       type: String,
+//      },
+//      WorkingDays: {
+//        type: String,
       
      
-     },
-     experienceRequired:{
-       type: String
-     },
-     CTC: {
-       type: String,
-       Default:"as per market standards"
+//      },
+//      experienceRequired:{
+//        type: String
+//      },
+//      CTC: {
+//        type: String,
+//        Default:"as per market standards"
       
      
-     },
-     Hremailid: {
-       type: String,
+//      },
+//      Hremailid: {
+//        type: String,
       
      
-     },
+//      },
 
-},{timestamps:true});   
+// },{timestamps:true});   
 
-const CompanyModel= await Mongoose.model("myJobs",Companyschema);
+// const CompanyModel= await Mongoose.model("myJobs",Companyschema);
 
 
 
