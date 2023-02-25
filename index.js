@@ -92,7 +92,6 @@ app.get("/addcompany",async(req,resp)=>
 {
 
 let data=await CompanyModel.find();
-console.log("hy");
 resp.send(data);
 
 })
