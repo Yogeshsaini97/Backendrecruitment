@@ -1,57 +1,57 @@
 
-// const Mongoose=require("mongoose")
+const Mongoose=require("mongoose")
  const cors=require("cors")   
 
  const PORT=5000;
  
-//  Mongoose.connect("mongodb://0.0.0.0:27017/mydatabase",()=>
-//  {
-//   console.log("connected to mongoose")
-//  }); 
+ Mongoose.connect("mongodb://0.0.0.0:27017/mydatabase",()=>
+ {
+  console.log("connected to mongoose")
+ }); 
  
-// //  const yogeshschema=new Mongoose.Schema({
-// //     Name:String,
-// //     Email:String,
-// //     Password:String
-// //  });   
+//  const yogeshschema=new Mongoose.Schema({
+//     Name:String,
+//     Email:String,
+//     Password:String
+//  });   
 
-// // const yogeshmodel=Mongoose.model("myuser",yogeshschema);
+// const yogeshmodel=Mongoose.model("myuser",yogeshschema);
 
 
-// const Companyschema=new Mongoose.Schema({
-//     companyName: {
-//         type: String,
-//         required: true,
+const Companyschema=new Mongoose.Schema({
+    companyName: {
+        type: String,
+        required: true,
        
-//       },
-//       Profiles: { type: Array, default: [] },
-//       Location: {
-//         type: Array, default: [] 
+      },
+      Profiles: { type: Array, default: [] },
+      Location: {
+        type: Array, default: [] 
   
-//       },
-//       WorkingDays: {
-//         type: String,
+      },
+      WorkingDays: {
+        type: String,
        
       
-//       },
-//       experienceRequired:{
-//         type: String
-//       },
-//       CTC: {
-//         type: String,
-//         Default:"as per market standards"
+      },
+      experienceRequired:{
+        type: String
+      },
+      CTC: {
+        type: String,
+        Default:"as per market standards"
        
       
-//       },
-//       Hremailid: {
-//         type: String,
+      },
+      Hremailid: {
+        type: String,
        
       
-//       },
+      },
 
-//  },{timestamps:true});   
+ },{timestamps:true});   
 
-// const CompanyModel=Mongoose.model("myJobs",Companyschema);
+const CompanyModel=Mongoose.model("myJobs",Companyschema);
 
 
 
@@ -111,23 +111,23 @@ app.use(cors());
 // })
 
 
-// app.post("/addcompany",async (req,res)=>
-// {
+app.post("/addcompany",async (req,res)=>
+{
    
-//     let data=await new CompanyModel(req.body); 
-//     console.log(data)
-//     const done=await data.save();
-//     console.log(data)
-//     res.send(req.body);
-//     console.log(req.body);
+    let data=await new CompanyModel(req.body); 
+    console.log(data)
+    const done=await data.save();
+    console.log(data)
+    res.send(req.body);
+    console.log(req.body);
 
 
-// })
+})
 
 app.get("/addcompany",async(req,resp)=>
 {
 
-// let data=await CompanyModel.find();
+let data=await CompanyModel.find();
 console.log("hy");
 resp.send("hy");
 
