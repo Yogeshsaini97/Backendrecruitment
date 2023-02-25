@@ -7,10 +7,13 @@ const cors=require("cors")
 
 const runbackend= async ()=>
 {
+
+    let a=0
     
  Mongoose.connect("mongodb://0.0.0.0:27017/mydatabase",()=>
 {
  console.log("connected to mongoose")
+  a=1;
 })
 
   
@@ -26,7 +29,8 @@ app.get("/addcompany",async(req,resp)=>
 {
 
 // let data=await CompanyModel.find();
-resp.send("hy");
+resp.send(a);
+console.log(a)
 
 })
 
