@@ -60,23 +60,23 @@ app.use(cors());
 
 
 
-app.post("/addcompany",async (req,res)=>
-{
+// app.post("/addcompany",async (req,res)=>
+// {
    
-    let data=await new CompanyModel(req.body); 
-    console.log(data)
-    const done=await data.save();
-    console.log(data)
-    res.send(req.body);
-    console.log(req.body);
+//     let data=await new CompanyModel(req.body); 
+//     console.log(data)
+//     const done=await data.save();
+//     console.log(data)
+//     res.send(req.body);
+//     console.log(req.body);
 
 
-})
+// })
 
 app.get("/addcompany",async(req,resp)=>
 {
 
-let data=await CompanyModel.find();
+// let data=await CompanyModel.find();
 console.log("hy");
 resp.send("yooooo");
 
