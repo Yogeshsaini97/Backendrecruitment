@@ -13,40 +13,9 @@ const runbackend= async ()=>
  console.log("connected to mongoose")
 })
 
-const Companyschema=new Mongoose.Schema({
-   companyName: {
-       type: String,
-       required: true,
-      
-     },
-     Profiles: { type: Array, default: [] },
-     Location: {
-       type: Array, default: [] 
- 
-     },
-     WorkingDays: {
-       type: String,
-      
-     
-     },
-     experienceRequired:{
-       type: String
-     },
-     CTC: {
-       type: String,
-       Default:"as per market standards"
-      
-     
-     },
-     Hremailid: {
-       type: String,
-      
-     
-     },
+  
 
-},{timestamps:true});   
 
-const CompanyModel= await Mongoose.model("myJobs",Companyschema);
 
 const PORT=5000;
 
@@ -56,8 +25,8 @@ app.use(cors());
 app.get("/addcompany",async(req,resp)=>
 {
 
-let data=await CompanyModel.find();
-resp.send(data);
+// let data=await CompanyModel.find();
+resp.send("hy");
 
 })
 
