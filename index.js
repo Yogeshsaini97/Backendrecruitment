@@ -1,4 +1,3 @@
-
 const Mongoose=require("mongoose")
 const express=require("express")
 const app=express();
@@ -10,11 +9,11 @@ const runbackend= async ()=>
 
     let a=0
     
- Mongoose.connect("mongodb://0.0.0.0:27017/mydatabase",()=>
-{
- console.log("connected to mongoose")
-  a=1;
-})
+//  Mongoose.connect("mongodb://0.0.0.0:27017/mydatabase",()=>
+// {
+//  console.log("connected to mongoose")
+//   a=1;
+// })
 
   
 
