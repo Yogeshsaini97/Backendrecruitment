@@ -76,7 +76,7 @@ app.use(cors());
 app.get("/addcompany",async(req,resp)=>
 {
 
-// let data=await CompanyModel.find();
+let data=await CompanyModel.find();
 console.log("hy");
 resp.send("yooooo");
 
