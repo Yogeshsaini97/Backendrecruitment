@@ -1,4 +1,5 @@
 
+require("dotenv").config();
 const Mongoose=require("mongoose")
 const express=require("express")
 const app=express();
@@ -11,7 +12,7 @@ Mongoose.set("strictQuery",false);
 const connectDB=async ()=>
 {
     try {
-        const conn=await Mongoose.connect("mongodb://0.0.0.0:27017/mydatabase",()=>
+        const conn=await Mongoose.connect(process.env.MONGO_URI,()=>
         {
          console.log("connected to mongoose")
          const Companyschema=new Mongoose.Schema({
@@ -64,18 +65,18 @@ const connectDB=async ()=>
          
          
          
-         // app.post("/addcompany",async (req,res)=>
-         // {
+         app.post("/addcompany",async (req,res)=>
+         {
            
-         //     let data=await new CompanyModel(req.body); 
-         //     console.log(data)
-         //     const done=await data.save();
-         //     console.log(data)
-         //     res.send(req.body);
-         //     console.log(req.body);
+             let data=await new CompanyModel(req.body); 
+             console.log(data)
+             const done=await data.save();
+             console.log(data)
+             res.send(req.body);
+             console.log(req.body);
          
          
-         // })
+         })
          
          app.get("/addcompany",async(req,resp)=>
          {
