@@ -21,9 +21,9 @@ const connectDB=async ()=>
                 required: true,
                
               },
-              Profiles: { type: Array, default: [] },
+              Profiles: {type: String,},
               Location: {
-                type: Array, default: [] 
+                type: String,
           
               },
               WorkingDays: {
